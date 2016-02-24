@@ -20,12 +20,12 @@
 		</properties>
 	</persistence-unit>
 
-	<persistence-unit name="idGeneration"
+	<persistence-unit name="idGenerationTable"
 		transaction-type="RESOURCE_LOCAL">
 		<class>de.ocejpad6.preperation.id.generation.Employee</class>
 		<class>de.ocejpad6.preperation.id.generation.Department</class>
 		<class>de.ocejpad6.preperation.id.generation.Address</class>
-	    <class>de.ocejpad6.preperation.id.generation.Item</class>
+		<class>de.ocejpad6.preperation.id.generation.Item</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
@@ -34,7 +34,27 @@
 			<property name="javax.persistence.jdbc.password" value="" />
 
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
-<!-- 			<property name="hibernate.hbm2ddl.auto" value="create-drop" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="mappingManyToOne"
+		transaction-type="RESOURCE_LOCAL">
+		<class>de.ocejpad6.preperation.mapping.manytoone.Employee</class>
+		<class>de.ocejpad6.preperation.mapping.manytoone.Department</class>
+		<class>de.ocejpad6.preperation.mapping.manytoone.ItemOrder</class>
+		<class>de.ocejpad6.preperation.mapping.manytoone.OrderItem</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:h2:tcp://localhost/~/ocejpad6/manytoone" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="show_sql" value="true" />
 		</properties>
 	</persistence-unit>

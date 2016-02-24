@@ -1,4 +1,4 @@
-package de.ocejpad6.preperation.id.generation;
+package de.ocejpad6.preperation.id.generation.table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

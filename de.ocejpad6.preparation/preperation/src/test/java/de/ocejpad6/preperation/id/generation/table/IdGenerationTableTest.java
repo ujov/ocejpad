@@ -1,14 +1,14 @@
-package de.ocejpad6.preperation.id.generation;
+package de.ocejpad6.preperation.id.generation.table;
 
 import org.junit.Test;
 
 import de.ocejpad6.preperation.AbstractTransactionalTest;
 
-public class IdGenerationTest extends AbstractTransactionalTest {
+public class IdGenerationTableTest extends AbstractTransactionalTest {
 
 	@Override
 	public String getPersistenceUnit() {
-		return "idGeneration";
+		return "idGenerationTable";
 	}
 
 	@Test
